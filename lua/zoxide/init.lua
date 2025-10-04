@@ -5,6 +5,6 @@ function M.hello_world()
 end
 
 -- Map a command to the function
-vim.api.nvim_command('command! HelloWorld lua require("zoxide.nvim").hello_world()')
+vim.api.nvim_create_user_command("Hello", M.hello_world, {})
 
 return M
